@@ -1,0 +1,231 @@
+[
+  {
+    "id": "kw",
+    "university": "광운대",
+    "admission": "지역균형",
+    "department": "소프트웨어학부",
+    "terms": [
+      "지역균형"
+    ],
+    "departments": [
+      "소프트웨어학부"
+    ],
+    "url": "https://ratio.uwayapply.com/Sl5KTjlKZiUmOiZKN2ZUZg=="
+  },
+  {
+    "id": "sg",
+    "university": "서강대",
+    "admission": "일반Ⅱ(서류)",
+    "department": "AI기반자유전공학부",
+    "terms": [
+      "일반Ⅱ"
+    ],
+    "departments": [
+      "AI기반자유전공학부"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12050481.html"
+  },
+  {
+    "id": "ih",
+    "university": "인하대",
+    "admission": "지역균형",
+    "department": "컴퓨터공학",
+    "terms": [
+      "지역균형"
+    ],
+    "departments": [
+      "컴퓨터공학과",
+      "컴퓨터공학"
+    ],
+    "url": "https://ratio.uwayapply.com/Sl5KOHxXJUpmJSY6Jko3ZlRm"
+  },
+  {
+    "id": "km1",
+    "university": "국민대",
+    "admission": "교과우수자",
+    "department": "미래융합대학 인문기술융합학부 자유전공(B)",
+    "terms": [
+      "교과우수자"
+    ],
+    "departments": [
+      "인문기술융합학부자유전공(B)",
+      "자유전공(B)"
+    ],
+    "url": "https://ratio.uwayapply.com/Sl5KVyVNOWFhOUpmJSY6Jko3ZlRm"
+  },
+  {
+    "id": "km2",
+    "university": "국민대",
+    "admission": "국민프런티어(종합)",
+    "department": "소프트웨어학부",
+    "terms": [
+      "국민프런티어"
+    ],
+    "departments": [
+      "소프트웨어학부"
+    ],
+    "url": "https://ratio.uwayapply.com/Sl5KVyVNOWFhOUpmJSY6Jko3ZlRm"
+  },
+  {
+    "id": "pn",
+    "university": "부산대",
+    "admission": "학생부종합",
+    "department": "컴퓨터공학전공",
+    "terms": [
+      "학생부종합전형"
+    ],
+    "departments": [
+      "AI컴퓨터공학부(컴퓨터공학전공)"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100661.html"
+  },
+  {
+    "id": "ss1",
+    "university": "숭실대",
+    "admission": "SW우수자",
+    "department": "AI소프트웨어학부",
+    "terms": [
+      "SW우수자"
+    ],
+    "departments": [
+      "AI소프트웨어학부"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html"
+  },
+  {
+    "id": "ss2",
+    "university": "숭실대",
+    "admission": "SSU미래인재(서류)",
+    "department": "지능전자공학부",
+    "terms": [
+      "SSU미래인재",
+      "서류"
+    ],
+    "departments": [
+      "지능전자공학부"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html"
+  },
+  {
+    "id": "kk",
+    "university": "건국대",
+    "admission": "KU자기추천(종합)",
+    "department": "KU자유전공학부",
+    "terms": [
+      "KU자기추천"
+    ],
+    "departments": [
+      "KU자유전공학부"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080381.html"
+  },
+  {
+    "id": "kh1",
+    "university": "경희대",
+    "admission": "네오르네상스(종합)",
+    "department": "[국제]소프트웨어융합",
+    "terms": [
+      "네오르네상스",
+      "국제캠퍼스"
+    ],
+    "departments": [
+      "소프트웨어융합학과",
+      "소프트웨어융합"
+    ],
+    "url": "https://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY="
+  },
+  {
+    "id": "kh2",
+    "university": "경희대",
+    "admission": "네오르네상스(종합)",
+    "department": "[국제]컴퓨터공학",
+    "terms": [
+      "네오르네상스",
+      "국제캠퍼스"
+    ],
+    "departments": [
+      "컴퓨터공학부 컴퓨터공학과"
+    ],
+    "url": "https://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY="
+  },
+  {
+    "id": "dg1",
+    "university": "동국대",
+    "admission": "DoDream(종합)",
+    "department": "정보통신공학",
+    "terms": [
+      "DoDream"
+    ],
+    "departments": [
+      "정보통신공학과",
+      "정보통신공학"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html"
+  },
+  {
+    "id": "dg2",
+    "university": "동국대",
+    "admission": "DoDream(종합)",
+    "department": "컴퓨터·AI학부",
+    "terms": [
+      "DoDream"
+    ],
+    "departments": [
+      "컴퓨터 · AI학부"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html"
+  },
+  {
+    "id": "ca",
+    "university": "중앙대",
+    "admission": "탐구형인재",
+    "department": "소프트웨어학부",
+    "terms": [
+      "탐구형인재"
+    ],
+    "departments": [
+      "소프트웨어학부"
+    ],
+    "url": "https://ratio.uwayapply.com/Sl5KOjhMSmYlJjomSjdmVGY="
+  },
+  {
+    "id": "uos",
+    "university": "서울시립대",
+    "admission": "학생부종합Ⅰ",
+    "department": "인공지능",
+    "terms": [
+      "학생부종합전형Ⅰ"
+    ],
+    "departments": [
+      "인공지능학과",
+      "인공지능"
+    ],
+    "url": "https://ratio.uwayapply.com/Sl5KJmE6SmYlJjomSjdmVGY="
+  },
+  {
+    "id": "ic",
+    "university": "인천대",
+    "admission": "지역균형",
+    "department": "컴퓨터공학부",
+    "terms": [
+      "지역균형"
+    ],
+    "departments": [
+      "컴퓨터공학부"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html"
+  },
+  {
+    "id": "dk",
+    "university": "단국대",
+    "admission": "지역균형",
+    "department": "퇴계혁신칼리지",
+    "terms": [
+      "지역균형"
+    ],
+    "departments": [
+      "퇴계혁신칼리지"
+    ],
+    "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html"
+  }
+]

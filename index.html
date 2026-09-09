@@ -19,7 +19,7 @@
     }
 
     main {
-      width: min(100%, 560px);
+      width: min(100%, 1100px);
       padding: 32px;
       border: 1px solid #e3e7ef;
       border-radius: 20px;
@@ -101,13 +101,90 @@
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html" target="_blank" rel="noopener noreferrer">숭실대</a>
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080381.html" target="_blank" rel="noopener noreferrer">건국대</a>
       <a class="button" href="https://ratio.uwayapply.com/power/?ratioURL=%2F%2Fratio.uwayapply.com%2FSl5KOnw5SmYlJjomSjdmVGY%3D&amp;applyURL=http%3A%2F%2Fipsi1.uwayapply.com%2F2027%2Fsusi2%2Fkhu%2F%3FCHA%3D1&amp;ratioNM=%B0%E6%C8%F1%B4%EB%C7%D0%B1%B3&amp;univURL=http://www.khu.ac.kr" target="_blank" rel="noopener noreferrer">경희대</a>
-      <span class="button disabled" aria-disabled="true" title="링크가 아직 등록되지 않았습니다">동국대</span>
+      <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html" target="_blank" rel="noopener noreferrer">동국대</a>
       <a class="button" href="https://ratio.uwayapply.com/power/?ratioURL=%2F%2Fratio.uwayapply.com%2FSl5KOjhMSmYlJjomSjdmVGY%3D&amp;applyURL=http%3A%2F%2Fipsi2.uwayapply.com%2F2027%2Fsusi2%2Fcau%2F%3FCHA%3D1&amp;ratioNM=%C1%DF%BE%D3%B4%EB%C7%D0%B1%B3&amp;univURL=http://www.cau.ac.kr" target="_blank" rel="noopener noreferrer">중앙대</a>
       <a class="button" href="https://ratio.uwayapply.com/power/?ratioURL=%2F%2Fratio.uwayapply.com%2FSl5KJmE6SmYlJjomSjdmVGY%3D&amp;applyURL=http%3A%2F%2Fipsi3.uwayapply.com%2F2027%2Fsusi2%2Fuos%2F%3FCHA%3D1&amp;ratioNM=%BC%AD%BF%EF%BD%C3%B8%B3%B4%EB%C7%D0%B1%B3&amp;univURL=https://www.uos.ac.kr/" target="_blank" rel="noopener noreferrer">서울시립대</a>
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html" target="_blank" rel="noopener noreferrer">인천대</a>
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html" target="_blank" rel="noopener noreferrer">단국대</a>
       <a class="button search" href="https://info.uway.com/power/?v_mode=school_nm_view&amp;isApply=1&amp;R_SearchText=%B0%C7%B1%B9" target="_blank" rel="noopener noreferrer">대학 검색</a>
     </div>
+    <section aria-labelledby="rates-title" style="margin-top:36px">
+      <h2 id="rates-title">관심 전형·학과 경쟁률</h2>
+      <p>매시간 5분 수집 예정 · 대학이 발표한 최신 공개 수치 기준</p>
+      <p id="update-status" role="status">경쟁률을 불러오는 중입니다.</p>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;text-align:left;min-width:720px">
+          <thead><tr><th>대학</th><th>전형 / 학과</th><th>모집</th><th>지원</th><th>경쟁률</th><th>확인 상태</th></tr></thead>
+          <tbody id="rates"></tbody>
+        </table>
+      </div>
+      <p style="font-size:14px;color:#596579">수집 실패 시 이전 수치와 마지막 성공 시각을 표시합니다. 지원 전 대학 버튼으로 원본을 확인해 주세요.</p>
+      <noscript>경쟁률 표를 보려면 자바스크립트를 허용해 주세요.</noscript>
+    </section>
   </main>
+  <style>
+    th,td {padding:14px 10px;border-bottom:1px solid #e3e7ef;vertical-align:top;font-size:14px;line-height:1.6}
+    th {background:#f4f6fb;white-space:nowrap}
+    td small {display:block;color:#596579;font-size:13px}
+    .rate {font-weight:700;color:#2446b8;white-space:nowrap}
+    .warning {color:#945400}
+  </style>
+  <script>
+    const tbody = document.getElementById('rates');
+    const statusLine = document.getElementById('update-status');
+    const dateText = value => value ? new Date(value).toLocaleString('ko-KR', {timeZone:'Asia/Seoul'}) : '아직 성공한 수집 없음';
+    function render(rows) {
+      const fragment = document.createDocumentFragment();
+      for (const row of rows) {
+        const tr = document.createElement('tr');
+        const cells = [row.university, row.admission, row.quota ?? '—', row.applicants ?? '—', row.ratio ?? '확인 대기', row.status === 'ok' ? '수집 성공' : row.status === 'stale' ? '갱신 실패 · 이전 수치' : '확인 대기'];
+        cells.forEach((value, index) => {
+          const td = document.createElement('td'); td.textContent = value;
+          if (index === 1) {const sub = document.createElement('small'); sub.textContent = row.department; td.append(sub);}
+          if (index === 4) {
+            td.className = 'rate';
+            if (row.previous_ratio) {
+              const previous = document.createElement('span');
+              previous.textContent = '  이전 ' + row.previous_ratio;
+              previous.style.cssText = 'opacity:.5;font-weight:400;margin-left:8px';
+              previous.title = '이전 수집 성공: ' + dateText(row.previous_success);
+              td.append(previous);
+            }
+          }
+          if (index === 5) {
+            const sub = document.createElement('small'); sub.textContent = dateText(row.last_success); td.append(sub);
+            if (row.status !== 'ok') td.className = 'warning';
+            if (row.error) td.title = row.error;
+            if (row.source_time) {const source = document.createElement('small'); source.textContent = '원본: ' + row.source_time; td.append(source);}
+          }
+          tr.append(td);
+        });
+        fragment.append(tr);
+      }
+      tbody.replaceChildren(fragment);
+    }
+    let busy = false;
+    async function refresh() {
+      if (busy) return; busy = true;
+      try {
+        const res = await fetch('./data.json?t=' + Date.now(), {cache:'no-store'});
+        if (!res.ok) throw new Error('missing');
+        const data = await res.json();
+        if (!Array.isArray(data.rows) || data.rows.length !== 17) throw new Error('invalid');
+        render(data.rows);
+        const age = Date.now() - Date.parse(data.checked_at);
+        statusLine.textContent = '최근 수집 시도: ' + dateText(data.checked_at) + (age > 90*60000 ? ' · 갱신 지연' : '') + ' · ' + data.rows.filter(r => r.status === 'ok').length + '/17개 성공';
+      } catch {
+        statusLine.textContent = '수집 결과를 불러오지 못했습니다. 자동 실행 설정 또는 네트워크를 확인해 주세요.';
+        if (!tbody.children.length) {
+          try {const res = await fetch('./targets.json'); if (res.ok) render(await res.json());} catch {}
+        }
+      } finally {busy = false;}
+    }
+    refresh();
+    // Read the published result; these requests do not scrape the universities.
+    setInterval(refresh, 60000);
+    document.addEventListener('visibilitychange', () => {if (!document.hidden) refresh();});
+  </script>
 </body>
 </html>
