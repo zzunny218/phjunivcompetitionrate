@@ -1,6 +1,15 @@
-name: Manual competition rates
+name: Competition rates
+run-name: 경쟁률 갱신
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - collect.py
+      - targets.json
+      - requirements.txt
+      - .github/workflows/refresh.yml
 permissions:
   contents: write
   pages: write
