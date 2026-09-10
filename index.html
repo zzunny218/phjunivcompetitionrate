@@ -110,7 +110,7 @@
     </div>
     <section aria-labelledby="rates-title" style="margin-top:36px">
       <h2 id="rates-title">관심 전형·학과 경쟁률</h2>
-      <p>매시간 5분 수집 예정 · 대학이 발표한 최신 공개 수치 기준</p>
+      <p>PC에서 refresh_rates.cmd 실행 시 수집 · 대학이 발표한 최신 공개 수치 기준</p>
       <p id="update-status" role="status">경쟁률을 불러오는 중입니다.</p>
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;text-align:left;min-width:720px">
@@ -173,9 +173,9 @@
         if (!Array.isArray(data.rows) || data.rows.length !== 17) throw new Error('invalid');
         render(data.rows);
         const age = Date.now() - Date.parse(data.checked_at);
-        statusLine.textContent = '최근 수집 시도: ' + dateText(data.checked_at) + (age > 90*60000 ? ' · 갱신 지연' : '') + ' · ' + data.rows.filter(r => r.status === 'ok').length + '/17개 성공';
+        statusLine.textContent = '최근 수집 시도: ' + dateText(data.checked_at) + ' · ' + data.rows.filter(r => r.status === 'ok').length + '/17개 성공';
       } catch {
-        statusLine.textContent = '수집 결과를 불러오지 못했습니다. 자동 실행 설정 또는 네트워크를 확인해 주세요.';
+        statusLine.textContent = '수집 결과를 불러오지 못했습니다. PC 수집 결과 또는 네트워크를 확인해 주세요.';
         if (!tbody.children.length) {
           try {const res = await fetch('./targets.json'); if (res.ok) render(await res.json());} catch {}
         }
