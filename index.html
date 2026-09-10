@@ -96,19 +96,11 @@
     <h1>대학교 경쟁률 바로가기</h1>
 
     <div class="buttons">
-      <a class="button" href="https://ratio.uwayapply.com/Sl5KTjlKZiUmOiZKN2ZUZg==" target="_blank" rel="noopener noreferrer">광운대</a>
-      <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12050481.html" target="_blank" rel="noopener noreferrer">서강대</a>
-      <a class="button" href="https://ratio.uwayapply.com/Sl5KOHxXJUpmJSY6Jko3ZlRm" target="_blank" rel="noopener noreferrer">인하대</a>
-      <a class="button" href="https://ratio.uwayapply.com/Sl5KVyVNOWFhOUpmJSY6Jko3ZlRm" target="_blank" rel="noopener noreferrer">국민대</a>
-      <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100661.html" target="_blank" rel="noopener noreferrer">부산대</a>
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html" target="_blank" rel="noopener noreferrer">숭실대</a>
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080381.html" target="_blank" rel="noopener noreferrer">건국대</a>
       <a class="button" href="https://ratio.uwayapply.com/power/?ratioURL=%2F%2Fratio.uwayapply.com%2FSl5KOnw5SmYlJjomSjdmVGY%3D&amp;applyURL=http%3A%2F%2Fipsi1.uwayapply.com%2F2027%2Fsusi2%2Fkhu%2F%3FCHA%3D1&amp;ratioNM=%B0%E6%C8%F1%B4%EB%C7%D0%B1%B3&amp;univURL=http://www.khu.ac.kr" target="_blank" rel="noopener noreferrer">경희대</a>
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html" target="_blank" rel="noopener noreferrer">동국대</a>
       <a class="button" href="https://ratio.uwayapply.com/power/?ratioURL=%2F%2Fratio.uwayapply.com%2FSl5KOjhMSmYlJjomSjdmVGY%3D&amp;applyURL=http%3A%2F%2Fipsi2.uwayapply.com%2F2027%2Fsusi2%2Fcau%2F%3FCHA%3D1&amp;ratioNM=%C1%DF%BE%D3%B4%EB%C7%D0%B1%B3&amp;univURL=http://www.cau.ac.kr" target="_blank" rel="noopener noreferrer">중앙대</a>
-      <a class="button" href="https://ratio.uwayapply.com/power/?ratioURL=%2F%2Fratio.uwayapply.com%2FSl5KJmE6SmYlJjomSjdmVGY%3D&amp;applyURL=http%3A%2F%2Fipsi3.uwayapply.com%2F2027%2Fsusi2%2Fuos%2F%3FCHA%3D1&amp;ratioNM=%BC%AD%BF%EF%BD%C3%B8%B3%B4%EB%C7%D0%B1%B3&amp;univURL=https://www.uos.ac.kr/" target="_blank" rel="noopener noreferrer">서울시립대</a>
-      <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html" target="_blank" rel="noopener noreferrer">인천대</a>
-      <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html" target="_blank" rel="noopener noreferrer">단국대</a>
       <a class="button search" href="https://info.uway.com/power/?v_mode=school_nm_view&amp;isApply=1&amp;R_SearchText=%B0%C7%B1%B9" target="_blank" rel="noopener noreferrer">대학 검색</a>
       <a class="button refresh" id="remote-refresh" href="https://github.com/zzunny218/phjunivcompetitionrate/actions/workflows/refresh.yml" target="_blank" rel="noopener noreferrer">휴대폰·PC에서 지금 갱신</a>
     </div>
@@ -175,10 +167,10 @@
         const res = await fetch('./data.json?t=' + Date.now(), {cache:'no-store'});
         if (!res.ok) throw new Error('missing');
         const data = await res.json();
-        if (!Array.isArray(data.rows) || data.rows.length !== 17) throw new Error('invalid');
+        if (!Array.isArray(data.rows)) throw new Error('invalid');
         render(data.rows);
         const age = Date.now() - Date.parse(data.checked_at);
-        statusLine.textContent = '최근 수집 시도: ' + dateText(data.checked_at) + ' · ' + data.rows.filter(r => r.status === 'ok').length + '/17개 성공';
+        statusLine.textContent = '최근 수집 시도: ' + dateText(data.checked_at) + ' · ' + data.rows.filter(r => r.status === 'ok').length + '/' + data.rows.length + '개 성공';
       } catch {
         statusLine.textContent = '수집 결과를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.';
         if (!tbody.children.length) {
