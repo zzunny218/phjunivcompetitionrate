@@ -66,23 +66,6 @@
       outline-offset: 2px;
     }
 
-    .button.disabled {
-      background: #c9ced9;
-      color: #697080;
-      cursor: not-allowed;
-    }
-
-    .button.disabled:hover { transform: none; }
-
-    .button.search {
-      grid-column: 1 / -1;
-      background: #172033;
-    }
-
-    .button.search:hover { background: #2b354a; }
-
-    .button.refresh { background: #087f5b; }
-    .button.refresh:hover { background: #066b4c; }
 
     @media (max-width: 430px) {
       main { padding: 24px 18px; }
@@ -104,91 +87,5 @@
       <a class="button search" href="https://info.uway.com/power/?v_mode=school_nm_view&amp;isApply=1&amp;R_SearchText=%B0%C7%B1%B9" target="_blank" rel="noopener noreferrer">대학 검색</a>
       <a class="button refresh" id="remote-refresh" href="https://github.com/zzunny218/phjunivcompetitionrate/actions/workflows/refresh.yml" target="_blank" rel="noopener noreferrer">휴대폰·PC에서 지금 갱신</a>
     </div>
-    <section aria-labelledby="rates-title" style="margin-top:36px">
-      <h2 id="rates-title">관심 전형·학과 경쟁률</h2>
-      <p>갱신 버튼 실행 시 수집 · 대학이 발표한 최신 공개 수치 기준</p>
-      <p style="font-size:14px;color:#596579">버튼을 누른 뒤 GitHub에 로그인하고 <strong>Run workflow</strong>를 두 번 누르세요. 실행 완료 후 이 페이지로 돌아오면 결과가 반영됩니다.</p>
-      <p id="update-status" role="status">경쟁률을 불러오는 중입니다.</p>
-      <div style="overflow-x:auto">
-        <table style="width:100%;border-collapse:collapse;text-align:left;min-width:720px">
-          <thead><tr><th>대학</th><th>전형 / 학과</th><th>모집</th><th>지원</th><th>경쟁률</th><th>확인 상태</th></tr></thead>
-          <tbody id="rates"></tbody>
-        </table>
-      </div>
-      <p style="font-size:14px;color:#596579">수집 실패 시 이전 수치와 마지막 성공 시각을 표시합니다. 지원 전 대학 버튼으로 원본을 확인해 주세요.</p>
-      <noscript>경쟁률 표를 보려면 자바스크립트를 허용해 주세요.</noscript>
-    </section>
-  </main>
-  <style>
-    th,td {padding:14px 10px;border-bottom:1px solid #e3e7ef;vertical-align:top;font-size:14px;line-height:1.6}
-    th {background:#f4f6fb;white-space:nowrap}
-    td small {display:block;color:#596579;font-size:13px}
-    .rate {font-weight:700;color:#2446b8;white-space:nowrap}
-    .warning {color:#945400}
-  </style>
-  <script>
-    const tbody = document.getElementById('rates');
-    const statusLine = document.getElementById('update-status');
-    const dateText = value => value ? new Date(value).toLocaleString('ko-KR', {timeZone:'Asia/Seoul'}) : '아직 성공한 수집 없음';
-    function render(rows) {
-      const fragment = document.createDocumentFragment();
-      for (const row of rows) {
-        const tr = document.createElement('tr');
-        const cells = [row.university, row.admission, row.quota ?? '—', row.applicants ?? '—', row.ratio ?? '확인 대기', row.status === 'ok' ? '수집 성공' : row.status === 'stale' ? '갱신 실패 · 이전 수치' : '확인 대기'];
-        cells.forEach((value, index) => {
-          const td = document.createElement('td'); td.textContent = value;
-          if (index === 1) {const sub = document.createElement('small'); sub.textContent = row.department; td.append(sub);}
-          if (index === 4) {
-            td.className = 'rate';
-            if (row.previous_ratio) {
-              const previous = document.createElement('span');
-              previous.textContent = '  이전 ' + row.previous_ratio;
-              previous.style.cssText = 'opacity:.5;font-weight:400;margin-left:8px';
-              previous.title = '이전 수집 성공: ' + dateText(row.previous_success);
-              td.append(previous);
-            }
-          }
-          if (index === 5) {
-            const sub = document.createElement('small'); sub.textContent = dateText(row.last_success); td.append(sub);
-            if (row.status !== 'ok') td.className = 'warning';
-            if (row.error) td.title = row.error;
-            if (row.source_time) {const source = document.createElement('small'); source.textContent = '원본: ' + row.source_time; td.append(source);}
-          }
-          tr.append(td);
-        });
-        fragment.append(tr);
-      }
-      tbody.replaceChildren(fragment);
-    }
-    let busy = false;
-    async function refresh() {
-      if (busy) return; busy = true;
-      try {
-        const res = await fetch('./data.json?t=' + Date.now(), {cache:'no-store'});
-        if (!res.ok) throw new Error('missing');
-        const data = await res.json();
-        if (!Array.isArray(data.rows)) throw new Error('invalid');
-        render(data.rows);
-        const age = Date.now() - Date.parse(data.checked_at);
-        statusLine.textContent = '최근 수집 시도: ' + dateText(data.checked_at) + ' · ' + data.rows.filter(r => r.status === 'ok').length + '/' + data.rows.length + '개 성공';
-      } catch {
-        statusLine.textContent = '수집 결과를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.';
-        if (!tbody.children.length) {
-          try {const res = await fetch('./targets.json'); if (res.ok) render(await res.json());} catch {}
-        }
-      } finally {busy = false;}
-    }
-    document.getElementById('remote-refresh').addEventListener('click', () => {
-      statusLine.textContent = 'GitHub 실행 화면이 열립니다. Run workflow를 두 번 누른 뒤 이 페이지로 돌아오세요.';
-      sessionStorage.setItem('waitingForRefresh', Date.now().toString());
-    });
-    if (sessionStorage.getItem('waitingForRefresh')) {
-      statusLine.textContent = '갱신 결과를 확인하는 중입니다. GitHub 작업 완료 후 자동으로 새 데이터를 불러옵니다.';
-    }
-    refresh();
-    // Read the published result; these requests do not scrape the universities.
-    setInterval(refresh, 60000);
-    document.addEventListener('visibilitychange', () => {if (!document.hidden) refresh();});
-  </script>
 </body>
 </html>
