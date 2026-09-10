@@ -81,6 +81,9 @@
 
     .button.search:hover { background: #2b354a; }
 
+    .button.refresh { background: #087f5b; }
+    .button.refresh:hover { background: #066b4c; }
+
     @media (max-width: 430px) {
       main { padding: 24px 18px; }
       .buttons { grid-template-columns: 1fr; }
@@ -107,10 +110,12 @@
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html" target="_blank" rel="noopener noreferrer">인천대</a>
       <a class="button" href="https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html" target="_blank" rel="noopener noreferrer">단국대</a>
       <a class="button search" href="https://info.uway.com/power/?v_mode=school_nm_view&amp;isApply=1&amp;R_SearchText=%B0%C7%B1%B9" target="_blank" rel="noopener noreferrer">대학 검색</a>
+      <a class="button refresh" id="pc-refresh" href="phjunivrates://refresh">PC에서 경쟁률 지금 갱신</a>
     </div>
     <section aria-labelledby="rates-title" style="margin-top:36px">
       <h2 id="rates-title">관심 전형·학과 경쟁률</h2>
-      <p>PC에서 refresh_rates.cmd 실행 시 수집 · 대학이 발표한 최신 공개 수치 기준</p>
+      <p>갱신 버튼 실행 시 수집 · 대학이 발표한 최신 공개 수치 기준</p>
+      <p style="font-size:14px;color:#596579">처음 한 번은 PC에서 ENABLE_SITE_BUTTON.bat을 실행해야 합니다.</p>
       <p id="update-status" role="status">경쟁률을 불러오는 중입니다.</p>
       <div style="overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;text-align:left;min-width:720px">
@@ -181,6 +186,9 @@
         }
       } finally {busy = false;}
     }
+    document.getElementById('pc-refresh').addEventListener('click', () => {
+      statusLine.textContent = 'PC 수집 프로그램을 여는 중입니다. 브라우저 확인창에서 열기를 누르세요. 완료 후 표가 자동으로 바뀝니다.';
+    });
     refresh();
     // Read the published result; these requests do not scrape the universities.
     setInterval(refresh, 60000);
