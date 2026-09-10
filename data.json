@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-10T07:54:40+09:00",
+  "checked_at": "2026-09-10T12:57:00+09:00",
   "rows": [
     {
       "id": "kw",
@@ -13,18 +13,18 @@
         "소프트웨어학부"
       ],
       "url": "https://ratio.uwayapply.com/Sl5KTjlKZiUmOiZKN2ZUZg==",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 9,
-      "applicants": 48,
-      "ratio": "5.33 : 1",
+      "applicants": 49,
+      "ratio": "5.44 : 1",
       "matched_admission": "학생부교과【지역균형전형】 학생부교과【지역균형 전형】 경쟁률 현황",
       "matched_department": "소프트웨어학부",
       "previous_ratio": "5.33 : 1",
-      "previous_success": "2026-09-10T07:52:54+09:00",
+      "previous_success": "2026-09-10T07:54:40+09:00",
       "status": "ok",
-      "last_success": "2026-09-10T07:54:40+09:00",
+      "last_success": "2026-09-10T12:57:00+09:00",
       "source_url": "https://ratio.uwayapply.com/Sl5KTjlKZiUmOiZKN2ZUZg==",
-      "source_time": "2026년 09월 10일 07시 00분 기준"
+      "source_time": "2026년 09월 10일 12시 00분 기준"
     },
     {
       "id": "sg",
@@ -38,19 +38,18 @@
         "AI기반자유전공학부"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12050481.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 15,
-      "applicants": 69,
-      "ratio": "4.60 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12050481.html",
+      "applicants": 101,
+      "ratio": "6.73 : 1",
       "matched_admission": "학생부종합(일반Ⅱ) 경쟁률 현황",
       "matched_department": "AI기반자유전공학부 / AI기반자유전공학부",
       "previous_ratio": "4.60 : 1",
-      "previous_success": "2026-09-10T07:37:55+09:00",
-      "source_time": "2026-09-09 오후 5:00 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12050481.html"
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12050481.html",
+      "source_time": "2026-09-10 오전 10:00 현황"
     },
     {
       "id": "ih",
@@ -65,18 +64,18 @@
         "컴퓨터공학"
       ],
       "url": "https://ratio.uwayapply.com/Sl5KOHxXJUpmJSY6Jko3ZlRm",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 17,
-      "applicants": 16,
-      "ratio": "0.94 : 1",
+      "applicants": 33,
+      "ratio": "1.94 : 1",
       "matched_admission": "학생부교과 지역균형 학생부교과 지역균형 경쟁률 현황",
       "matched_department": "AI융합대학 / 컴퓨터공학과 / 컴퓨터공학과",
       "previous_ratio": "0.94 : 1",
-      "previous_success": "2026-09-10T07:52:54+09:00",
+      "previous_success": "2026-09-10T07:54:40+09:00",
       "status": "ok",
-      "last_success": "2026-09-10T07:54:40+09:00",
+      "last_success": "2026-09-10T12:57:00+09:00",
       "source_url": "https://ratio.uwayapply.com/Sl5KOHxXJUpmJSY6Jko3ZlRm",
-      "source_time": "2026년 09월 09일 17시 00분 기준"
+      "source_time": "2026년 09월 10일 10시 00분 기준"
     },
     {
       "id": "km1",
@@ -91,18 +90,18 @@
         "자유전공(B)"
       ],
       "url": "https://ratio.uwayapply.com/Sl5KVyVNOWFhOUpmJSY6Jko3ZlRm",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 30,
-      "applicants": 85,
-      "ratio": "2.83 : 1",
+      "applicants": 89,
+      "ratio": "2.97 : 1",
       "matched_admission": "학생부교과(교과우수자(학교장추천) 전형) 학생부교과(교과우수자(학교장추천) 전형) 경쟁률 현황",
       "matched_department": "전공자율 / 미래융합대학 / 인문기술융합학부 자유전공(B)",
       "previous_ratio": "2.83 : 1",
-      "previous_success": "2026-09-10T07:52:54+09:00",
+      "previous_success": "2026-09-10T07:54:40+09:00",
       "status": "ok",
-      "last_success": "2026-09-10T07:54:40+09:00",
+      "last_success": "2026-09-10T12:57:00+09:00",
       "source_url": "https://ratio.uwayapply.com/Sl5KVyVNOWFhOUpmJSY6Jko3ZlRm",
-      "source_time": "2026년 09월 10일 07시 00분 기준"
+      "source_time": "2026년 09월 10일 12시 00분 기준"
     },
     {
       "id": "km2",
@@ -116,18 +115,18 @@
         "소프트웨어학부"
       ],
       "url": "https://ratio.uwayapply.com/Sl5KVyVNOWFhOUpmJSY6Jko3ZlRm",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 19,
-      "applicants": 83,
-      "ratio": "4.37 : 1",
+      "applicants": 85,
+      "ratio": "4.47 : 1",
       "matched_admission": "학생부종합(국민프런티어 전형) 학생부종합(국민프런티어 전형) 경쟁률 현황",
       "matched_department": "자연 / 소프트웨어융합대학 / 소프트웨어학부",
       "previous_ratio": "4.37 : 1",
-      "previous_success": "2026-09-10T07:52:54+09:00",
+      "previous_success": "2026-09-10T07:54:40+09:00",
       "status": "ok",
-      "last_success": "2026-09-10T07:54:40+09:00",
+      "last_success": "2026-09-10T12:57:00+09:00",
       "source_url": "https://ratio.uwayapply.com/Sl5KVyVNOWFhOUpmJSY6Jko3ZlRm",
-      "source_time": "2026년 09월 10일 07시 00분 기준"
+      "source_time": "2026년 09월 10일 12시 00분 기준"
     },
     {
       "id": "pn",
@@ -141,19 +140,18 @@
         "AI컴퓨터공학부(컴퓨터공학전공)"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100661.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 12,
-      "applicants": 35,
-      "ratio": "2.92 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100661.html",
+      "applicants": 36,
+      "ratio": "3.00 : 1",
       "matched_admission": "학생부종합(학생부종합전형) 경쟁률 현황",
       "matched_department": "AI대학 / AI컴퓨터공학부(컴퓨터공학전공)",
       "previous_ratio": "2.92 : 1",
-      "previous_success": "2026-09-10T07:37:55+09:00",
-      "source_time": "2026-09-10 오전 7:30 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100661.html"
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100661.html",
+      "source_time": "2026-09-10 오후 12:30 현황"
     },
     {
       "id": "ss1",
@@ -167,19 +165,18 @@
         "AI소프트웨어학부"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 9,
-      "applicants": 77,
-      "ratio": "8.56 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html",
+      "applicants": 78,
+      "ratio": "8.67 : 1",
       "matched_admission": "학생부종합(SW우수자전형) 경쟁률 현황",
       "matched_department": "AI소프트웨어학부",
       "previous_ratio": "8.56 : 1",
-      "previous_success": "2026-09-10T07:37:55+09:00",
-      "source_time": "2026-09-10 오전 7:00 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html"
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html",
+      "source_time": "2026-09-10 오후 12:00 현황"
     },
     {
       "id": "ss2",
@@ -194,19 +191,18 @@
         "지능전자공학부"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 9,
-      "applicants": 56,
-      "ratio": "6.22 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html",
+      "applicants": 61,
+      "ratio": "6.78 : 1",
       "matched_admission": "학생부종합(SSU미래인재전형-서류형) 경쟁률 현황",
       "matched_department": "지능전자공학부",
       "previous_ratio": "6.22 : 1",
-      "previous_success": "2026-09-10T07:37:55+09:00",
-      "source_time": "2026-09-10 오전 7:00 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html"
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010851.html",
+      "source_time": "2026-09-10 오후 12:00 현황"
     },
     {
       "id": "kk",
@@ -220,19 +216,18 @@
         "KU자유전공학부"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080381.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 183,
-      "applicants": 1559,
-      "ratio": "8.52 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080381.html",
+      "applicants": 2643,
+      "ratio": "14.44 : 1",
       "matched_admission": "학생부종합(KU자기추천) 경쟁률 현황",
       "matched_department": "상허교양대학 / KU자유전공학부",
       "previous_ratio": "8.52 : 1",
-      "previous_success": "2026-09-10T07:37:55+09:00",
-      "source_time": "2026-09-09 오후 5:00 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080381.html"
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080381.html",
+      "source_time": "2026-09-10 오전 10:00 현황"
     },
     {
       "id": "kh1",
@@ -248,18 +243,18 @@
         "소프트웨어융합"
       ],
       "url": "https://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY=",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 5,
-      "applicants": 28,
-      "ratio": "5.60 : 1",
+      "applicants": 44,
+      "ratio": "8.80 : 1",
       "matched_admission": "국제캠퍼스 학생부종합(네오르네상스전형) 국제캠퍼스 학생부종합(네오르네상스전형) 경쟁률 현황",
       "matched_department": "자연계열 / 소프트웨어융합대학 / 소프트웨어융합학과",
       "previous_ratio": "5.60 : 1",
-      "previous_success": "2026-09-10T07:52:54+09:00",
+      "previous_success": "2026-09-10T07:54:40+09:00",
       "status": "ok",
-      "last_success": "2026-09-10T07:54:40+09:00",
+      "last_success": "2026-09-10T12:57:00+09:00",
       "source_url": "https://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY=",
-      "source_time": "2026년 09월 09일 17시 00분 기준"
+      "source_time": "2026년 09월 10일 10시 00분 기준"
     },
     {
       "id": "kh2",
@@ -274,18 +269,18 @@
         "컴퓨터공학부 컴퓨터공학과"
       ],
       "url": "https://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY=",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 7,
-      "applicants": 34,
-      "ratio": "4.86 : 1",
+      "applicants": 52,
+      "ratio": "7.43 : 1",
       "matched_admission": "국제캠퍼스 학생부종합(네오르네상스전형) 국제캠퍼스 학생부종합(네오르네상스전형) 경쟁률 현황",
       "matched_department": "자연계열 / 소프트웨어융합대학 / 컴퓨터공학부 컴퓨터공학과",
       "previous_ratio": "4.86 : 1",
-      "previous_success": "2026-09-10T07:52:54+09:00",
+      "previous_success": "2026-09-10T07:54:40+09:00",
       "status": "ok",
-      "last_success": "2026-09-10T07:54:40+09:00",
+      "last_success": "2026-09-10T12:57:00+09:00",
       "source_url": "https://ratio.uwayapply.com/Sl5KOnw5SmYlJjomSjdmVGY=",
-      "source_time": "2026년 09월 09일 17시 00분 기준"
+      "source_time": "2026년 09월 10일 10시 00분 기준"
     },
     {
       "id": "dg1",
@@ -300,19 +295,18 @@
         "정보통신공학"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 20,
-      "applicants": 7,
-      "ratio": "0.35 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html",
+      "applicants": 30,
+      "ratio": "1.50 : 1",
       "matched_admission": "Do Dream 경쟁률 현황",
       "matched_department": "공과 / 정보통신공학과",
       "previous_ratio": "0.35 : 1",
-      "previous_success": "2026-09-10T07:37:55+09:00",
-      "source_time": "2026-09-09 오후 5:00 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html"
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html",
+      "source_time": "2026-09-10 오전 10:00 현황"
     },
     {
       "id": "dg2",
@@ -326,19 +320,18 @@
         "컴퓨터 · AI학부"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 64,
-      "applicants": 53,
-      "ratio": "0.83 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html",
+      "applicants": 217,
+      "ratio": "3.39 : 1",
       "matched_admission": "Do Dream 경쟁률 현황",
       "matched_department": "첨단융합 / 컴퓨터 · AI학부",
       "previous_ratio": "0.83 : 1",
-      "previous_success": "2026-09-10T07:37:55+09:00",
-      "source_time": "2026-09-09 오후 5:00 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html"
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550541.html",
+      "source_time": "2026-09-10 오전 10:00 현황"
     },
     {
       "id": "ca",
@@ -352,18 +345,18 @@
         "소프트웨어학부"
       ],
       "url": "https://ratio.uwayapply.com/Sl5KOjhMSmYlJjomSjdmVGY=",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 18,
-      "applicants": 86,
-      "ratio": "4.78 : 1",
+      "applicants": 127,
+      "ratio": "7.06 : 1",
       "matched_admission": "학생부종합(탐구형인재) 학생부종합(탐구형인재) 경쟁률 현황",
       "matched_department": "소프트웨어대학 / 소프트웨어학부 / 소프트웨어학부 / 서울",
       "previous_ratio": "4.78 : 1",
-      "previous_success": "2026-09-10T07:52:54+09:00",
+      "previous_success": "2026-09-10T07:54:40+09:00",
       "status": "ok",
-      "last_success": "2026-09-10T07:54:40+09:00",
+      "last_success": "2026-09-10T12:57:00+09:00",
       "source_url": "https://ratio.uwayapply.com/Sl5KOjhMSmYlJjomSjdmVGY=",
-      "source_time": "2026년 09월 09일 17시 00분 기준"
+      "source_time": "2026년 09월 10일 10시 00분 기준"
     },
     {
       "id": "uos",
@@ -378,18 +371,18 @@
         "인공지능"
       ],
       "url": "https://ratio.uwayapply.com/Sl5KJmE6SmYlJjomSjdmVGY=",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 14,
-      "applicants": 74,
-      "ratio": "5.29 : 1",
+      "applicants": 156,
+      "ratio": "11.14 : 1",
       "matched_admission": "학생부종합전형Ⅰ(면접형) 학생부종합전형Ⅰ(면접형) 경쟁률 현황",
       "matched_department": "인공지능융합대학 / 인공지능학과",
       "previous_ratio": "5.29 : 1",
-      "previous_success": "2026-09-10T07:52:54+09:00",
+      "previous_success": "2026-09-10T07:54:40+09:00",
       "status": "ok",
-      "last_success": "2026-09-10T07:54:40+09:00",
+      "last_success": "2026-09-10T12:57:00+09:00",
       "source_url": "https://ratio.uwayapply.com/Sl5KJmE6SmYlJjomSjdmVGY=",
-      "source_time": "2026년 09월 09일 17시 00분 기준"
+      "source_time": "2026년 09월 10일 10시 00분 기준"
     },
     {
       "id": "ic",
@@ -403,19 +396,18 @@
         "컴퓨터공학부"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 11,
       "applicants": 41,
       "ratio": "3.73 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html",
       "matched_admission": "학생부교과(지역균형) 경쟁률 현황",
       "matched_department": "인공지능대학 / 컴퓨터공학부",
       "previous_ratio": "3.73 : 1",
-      "previous_success": "2026-09-10T07:37:55+09:00",
-      "source_time": "2026-09-10 오전 7:00 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html"
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230791.html",
+      "source_time": "2026-09-10 오후 12:00 현황"
     },
     {
       "id": "dk",
@@ -429,17 +421,18 @@
         "퇴계혁신칼리지(광역)"
       ],
       "url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
-      "checked_at": "2026-09-10T07:54:40+09:00",
+      "checked_at": "2026-09-10T12:57:00+09:00",
       "quota": 29,
-      "applicants": 30,
-      "ratio": "1.03 : 1",
-      "last_success": "2026-09-10T07:52:54+09:00",
-      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+      "applicants": 33,
+      "ratio": "1.14 : 1",
       "matched_admission": "[학생부교과] 지역균형선발 경쟁률 현황 (죽전)",
       "matched_department": "죽전 / - / 퇴계혁신칼리지 / 퇴계혁신칼리지(광역)",
-      "source_time": "2026-09-10 오전 7:50 현황",
-      "status": "stale",
-      "error": "403 Client Error: Forbidden for url: https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html"
+      "previous_ratio": "1.03 : 1",
+      "previous_success": "2026-09-10T07:52:54+09:00",
+      "status": "ok",
+      "last_success": "2026-09-10T12:57:00+09:00",
+      "source_url": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420521.html",
+      "source_time": "2026-09-10 오후 12:55 현황"
     }
   ]
 }
