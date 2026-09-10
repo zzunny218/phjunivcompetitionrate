@@ -13,7 +13,7 @@ from datetime import datetime
 REPO = "zzunny218/phjunivcompetitionrate"
 TASK = "PHUniversityRates"
 ROOT = Path(__file__).resolve().parent
-GH = shutil.which("gh")
+GH = os.environ.get("PH_GH_EXE") or shutil.which("gh")
 
 def gh(*args, payload=None):
     if not GH:
