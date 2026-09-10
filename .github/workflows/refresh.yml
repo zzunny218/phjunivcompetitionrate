@@ -1,11 +1,6 @@
-name: Hourly competition rates
+name: Manual competition rates
 on:
-  schedule:
-    - cron: '5 * * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['collect.py', 'targets.json', 'requirements.txt', '.github/workflows/refresh.yml']
 permissions:
   contents: write
   pages: write
