@@ -1,4 +1,4 @@
-"""Windows hourly collector. Requires Python 3.11+, GitHub CLI and gh auth login."""
+"""Windows manual collector. Requires Python 3.11+, GitHub CLI and gh auth login."""
 import base64
 import contextlib
 import json
@@ -51,24 +51,28 @@ def collect_and_publish(require_all=False):
                     "content": base64.b64encode(raw).decode(), "branch": "main"})
         print("Data saved to GitHub. Pages publication may take a few minutes.", flush=True)
 
-def setup():
-    # Prove access and collection before changing the active scheduler.
-    collect_and_publish(require_all=True)
-    command = subprocess.list2cmdline([sys.executable, "-X", "utf8", str(Path(__file__).resolve())])
-    if len(command) > 260:
-        raise RuntimeError("Move the project to a shorter path, such as C:\\UniversityRates.")
-    exists = subprocess.run(["schtasks", "/Query", "/TN", TASK], capture_output=True)
-    if exists.returncode == 0:
-        raise RuntimeError("PHUniversityRates already exists. Inspect it in Task Scheduler before reinstalling.")
-    subprocess.run(["schtasks", "/Create", "/TN", TASK, "/SC", "HOURLY", "/MO", "1",
-                    "/ST", "00:05", "/TR", command, "/IT", "/RL", "LIMITED"], check=True)
-    try:
-        gh("workflow", "disable", "refresh.yml", "--repo", REPO)
-    except Exception:
-        # Roll back only the exact task created by this setup.
-        subprocess.run(["schtasks", "/Delete", "/TN", TASK, "/F"], check=True)
-        raise
-    print("SETUP COMPLETE: every hour at :05 while logged in. Keep this folder and the PC awake.", flush=True)
+def stop_old_schedule():
+    import xml.etree.ElementTree as ET
+    result = subprocess.run(["schtasks", "/Query", "/TN", TASK, "/XML"],
+                            capture_output=True)
+    if result.returncode:
+        # Absence is verified against the full task listing; other errors stop.
+        listing = subprocess.run(["schtasks", "/Query", "/FO", "CSV", "/NH"],
+                                 capture_output=True)
+        if listing.returncode or TASK.encode() in listing.stdout:
+            raise RuntimeError("Could not inspect the previous Windows task. Check Task Scheduler.")
+        return
+    root = ET.fromstring(result.stdout)
+    ns = {"t": "http://schemas.microsoft.com/windows/2004/02/mit/task"}
+    actions = root.findall(".//t:Exec", ns)
+    if len(actions) != 1:
+        raise RuntimeError("Unexpected existing task. Inspect PHUniversityRates in Task Scheduler.")
+    text = " ".join(element.text or "" for element in actions[0])
+    if "windows_sync.py" not in text or "python" not in text.lower():
+        raise RuntimeError("Existing task does not match this collector; no task was changed.")
+    subprocess.run(["schtasks", "/Change", "/TN", TASK, "/DISABLE"], check=True)
+    print("Previous Windows schedule disabled.", flush=True)
+
 
 def main():
     if os.name != "nt":
@@ -82,15 +86,14 @@ def main():
         try:
             msvcrt.locking(lock.fileno(), msvcrt.LK_NBLCK, 1)
         except OSError:
-            return
+            print("Another collection is already running.")
+            return 2
         with (ROOT / "windows-sync.log").open("a", encoding="utf-8") as log:
             with contextlib.redirect_stdout(log), contextlib.redirect_stderr(log):
                 print("\nRUN", datetime.now().isoformat(), flush=True)
                 try:
-                    if "--setup" in sys.argv:
-                        setup()
-                    else:
-                        collect_and_publish()
+                    stop_old_schedule()
+                    collect_and_publish()
                 except Exception as exc:
                     print("FAILED:", str(exc), flush=True)
                     return 1
@@ -98,6 +101,5 @@ def main():
 
 if __name__ == "__main__":
     code = main()
-    if "--setup" in sys.argv:
-        print("See windows-sync.log for the result. SETUP COMPLETE means installation succeeded.")
+    print("See windows-sync.log for collection counts and publication status.")
     sys.exit(code or 0)
