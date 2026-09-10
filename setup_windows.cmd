@@ -1,2 +1,2 @@
 @echo off
-call "%~dp0refresh_rates.cmd"
+call "%~dp0RUN_REFRESH.bat"
